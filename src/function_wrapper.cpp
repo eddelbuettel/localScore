@@ -168,9 +168,9 @@ double daudin(int local_score, int sequence_length, NumericVector score_probabil
   Rcpp::IntegerVector score_values_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_min_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_max_ ; //non nullable equivalent
-  sequence_min_ = sequence_min.isUsable()?sequence_min:IntegerVector::create();
-  sequence_max_ = sequence_max.isUsable()?sequence_max:IntegerVector::create();
-  score_values_ = score_values.isUsable()?score_values:IntegerVector::create();
+  sequence_min_ = sequence_min.isUsable() ? IntegerVector(sequence_min) : IntegerVector::create();
+  sequence_max_ = sequence_max.isUsable() ? IntegerVector(sequence_max) : IntegerVector::create();
+  score_values_ = score_values.isUsable() ? IntegerVector(score_values) : IntegerVector::create();
   
   bool checkOK = checkKDMparameters(local_score, sequence_length, score_probabilities, sequence_min_, sequence_max_, score_values_) ;
 
@@ -221,9 +221,9 @@ double karlin(int local_score, int sequence_length, NumericVector score_probabil
   Rcpp::IntegerVector score_values_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_min_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_max_ ; //non nullable equivalent
-  sequence_min_ = sequence_min.isUsable()?sequence_min:IntegerVector::create();
-  sequence_max_ = sequence_max.isUsable()?sequence_max:IntegerVector::create();
-  score_values_ = score_values.isUsable()?score_values:IntegerVector::create();
+  sequence_min_ = sequence_min.isUsable() ? IntegerVector(sequence_min) : IntegerVector::create();
+  sequence_max_ = sequence_max.isUsable() ? IntegerVector(sequence_max) : IntegerVector::create();
+  score_values_ = score_values.isUsable() ? IntegerVector(score_values) :IntegerVector::create();
       
   bool checkOK = checkKDMparameters(local_score, sequence_length, score_probabilities, sequence_min_, sequence_max_, score_values_) ;
 
@@ -255,9 +255,9 @@ NumericVector karlin_parameters(NumericVector score_probabilities,
   Rcpp::IntegerVector score_values_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_min_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_max_ ; //non nullable equivalent
-  sequence_min_ = sequence_min.isUsable()?sequence_min:IntegerVector::create();
-  sequence_max_ = sequence_max.isUsable()?sequence_max:IntegerVector::create();
-  score_values_ = score_values.isUsable()?score_values:IntegerVector::create();
+  sequence_min_ = sequence_min.isUsable() ? IntegerVector(sequence_min) : IntegerVector::create();
+  sequence_max_ = sequence_max.isUsable() ? IntegerVector(sequence_max) : IntegerVector::create();
+  score_values_ = score_values.isUsable() ? IntegerVector(score_values) : IntegerVector::create();
   
   bool checkOK = checkKDMparameters(1, 1, score_probabilities, sequence_min_, sequence_max_, score_values_) ;
 
@@ -321,9 +321,9 @@ double mcc(int local_score, int sequence_length, NumericVector score_probabiliti
   Rcpp::IntegerVector score_values_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_min_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_max_ ; //non nullable equivalent
-  sequence_min_ = sequence_min.isUsable()?sequence_min:IntegerVector::create();
-  sequence_max_ = sequence_max.isUsable()?sequence_max:IntegerVector::create();
-  score_values_ = score_values.isUsable()?score_values:IntegerVector::create();
+  sequence_min_ = sequence_min.isUsable() ? IntegerVector(sequence_min) : IntegerVector::create();
+  sequence_max_ = sequence_max.isUsable() ? IntegerVector(sequence_max) : IntegerVector::create();
+  score_values_ = score_values.isUsable() ? IntegerVector(score_values) : IntegerVector::create();
   
   bool checkOK = checkKDMparameters(local_score, sequence_length, score_probabilities, sequence_min_, sequence_max_, score_values_) ;
 
@@ -369,9 +369,9 @@ double maxPartialSumd(int k, NumericVector score_probabilities,
   Rcpp::IntegerVector score_values_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_min_ ; //non nullable equivalent
   Rcpp::IntegerVector sequence_max_ ; //non nullable equivalent
-  sequence_min_ = sequence_min.isUsable()?sequence_min:IntegerVector::create();
-  sequence_max_ = sequence_max.isUsable()?sequence_max:IntegerVector::create();
-  score_values_ = score_values.isUsable()?score_values:IntegerVector::create();
+  sequence_min_ = sequence_min.isUsable() ? IntegerVector(sequence_min) : IntegerVector::create();
+  sequence_max_ = sequence_max.isUsable() ? IntegerVector(sequence_max) : IntegerVector::create();
+  score_values_ = score_values.isUsable() ? IntegerVector(score_values) : IntegerVector::create();
   
   bool checkOK = checkKDMparameters(1, 1, score_probabilities, sequence_min_, sequence_max_, score_values_) ;
 
